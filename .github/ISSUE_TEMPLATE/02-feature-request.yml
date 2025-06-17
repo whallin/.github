@@ -1,0 +1,134 @@
+name: ✨ Feature request
+description: Suggest a new feature or enhancement
+title: "[FEATURE] "
+type: Feature
+labels: ["enhancement", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **📋 When to use this template:**
+        - You want to propose a new feature or capability.
+        - You have ideas to improve existing features.
+        - You need functionality that doesn't currently exist.
+        - You want to suggest performance or usability improvements.
+
+        **🤔 Before you start:**
+        - Consider if this aligns with the project's goals and scope.
+        - Think about how this would benefit other users, not just your specific use case.
+
+        **Need help with an existing feature?** Use the "[❓ Question & support](https://github.com/whallin/.github/issues/new?template=03-question-support.yml)" template.
+        **Found a bug?** Use the "[🐞 Bug report](https://github.com/whallin/.github/issues/new?template=01-bug-report.yml)" template.
+
+        ---
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Pre-flight checklist
+      description: By submitting this issue, you agree to follow our guidelines.
+      options:
+        - label: I've searched existing issues to ensure this feature hasn't been requested before.
+          required: true
+        - label: I've read the documentation and this feature is not already available.
+          required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: 🏷️ Feature type
+      description: What type of feature is this?
+      options:
+        - New functionality
+        - Enhancement to existing feature
+        - Performance improvement
+        - Developer experience improvement
+        - Documentation improvement
+        - API change/addition
+        - UI/UX improvement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: ❓ Problem description
+      description: Is your feature request related to a problem? Please describe the problem you're trying to solve.
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution-description
+    attributes:
+      label: 💡 Proposed solution
+      description: Describe the solution you'd like to see implemented.
+      placeholder: "I'd like to see..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives considered
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: "I've also considered..."
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 🎯 Use cases
+      description: Describe specific use cases where this feature would be beneficial.
+      placeholder: |
+        1. As a [user type], I want to [action] so that [benefit]
+        2. When [scenario], I need to [action] because [reason]
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: 📸 Examples or mockups
+      description: If applicable, add examples, mockups, or references to similar features in other tools.
+      placeholder: Drag and drop images here OR provide links to examples
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🎯 Priority
+      description: How important is this feature to you?
+      options:
+        - Low — nice to have
+        - Medium — would be useful
+        - High — important for workflow
+        - Critical — blocking current work
+    validations:
+      required: true
+
+  - type: dropdown
+    id: implementation-complexity
+    attributes:
+      label: ⚙️ Implementation complexity
+      description: If you have technical knowledge, how complex do you think this feature would be to implement?
+      options:
+        - Simple — minor change/addition
+        - Medium — moderate development effort
+        - Complex — significant development effort
+        - Unknown — I'm not sure
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      description: Would you be willing to contribute to implementing this feature?
+      options:
+        - label: I'd be willing to implement this feature myself.
+        - label: I'd be willing to help with testing.
+        - label: I'd be willing to help with documentation.
+        - label: I'd be willing to provide feedback during development.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional context
+      description: Add any other context, links, or information about the feature request here.
+      placeholder: Any additional information that might be helpful...

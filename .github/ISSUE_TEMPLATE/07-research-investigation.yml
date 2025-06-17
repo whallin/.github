@@ -1,0 +1,205 @@
+name: 🔍 Research & investigation
+description: Track research tasks, technical investigations, and exploratory work
+title: "[RESEARCH] "
+type: Research
+labels: ["discussion", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **👋 Who should use this template:**
+        - Myself when conducting technical research.
+        - Contributors exploring new approaches.
+        - Anyone doing exploratory or investigative work for my projects.
+
+        **🧭 Research vs. other templates:**
+        - **Research**: Exploring unknowns, gathering information, investigating options.
+        - **Feature request**: Proposing specific functionality based on known requirements.
+        - **Task**: Implementing something with a known approach.
+        - **Bug report**: Fixing something that's already broken.
+
+        **🔎 Types of research I track:**
+        - **Technology evaluation**: Comparing tools, libraries, or platforms.
+        - **Performance analysis**: Investigating bottlenecks or optimization opportunities.
+        - **Security investigation**: Researching vulnerabilities or security improvements.
+        - **Architecture exploration**: Investigating system design approaches.
+        - **User experience research**: Understanding user needs and usage patterns.
+        - **Proof of concept**: Building prototypes to validate ideas.
+
+        **Already know what you want to build?** Use the "[✨ Feature request](https://github.com/whallin/.github/issues/new?template=02-feature-request.yml)" or "[🔧 Task & maintenance](https://github.com/whallin/.github/issues/new?template=04-task-maintenance.yml)" template.
+        **Need help with something specific?** Use the "[❓ Question & support](https://github.com/whallin/.github/issues/new?template=03-question-support.yml)" template.
+
+        ---
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Pre-flight checklist
+      description: By submitting this issue, you agree to follow our guidelines.
+      options:
+        - label: I've searched existing issues to ensure similar research hasn't been done.
+          required: true
+        - label: This is an investigation/research task and not a feature request or bug report.
+          required: true
+
+  - type: dropdown
+    id: research-type
+    attributes:
+      label: 🏷️ Research type
+      description: What type of research or investigation is this?
+      options:
+        - Technology evaluation
+        - Performance analysis
+        - Security investigation
+        - Architecture exploration
+        - Library/Tool comparison
+        - Market research
+        - User research
+        - Proof of concept
+        - Problem analysis
+        - Best practices research
+        - Competitive analysis
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: research-objective
+    attributes:
+      label: 🎯 Research objective
+      description: What are you trying to research or investigate?
+      placeholder: "We need to investigate..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 📝 Background & context
+      description: Why is this research needed? What's the current situation?
+      placeholder: "Currently we have X, but we need to understand Y because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: research-questions
+    attributes:
+      label: ❓ Research questions
+      description: What specific questions need to be answered?
+      placeholder: |
+        1. How does X compare to Y in terms of...?
+        2. What's the performance impact of...?
+        3. Can we achieve Z using...?
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: ✅ Success criteria
+      description: How will you know when this research is complete?
+      placeholder: |
+        - [ ] Question 1 answered with evidence
+        - [ ] Comparison matrix created
+        - [ ] Recommendation documented
+        - [ ] Findings presented to team
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🎯 Priority
+      description: How urgent is this research?
+      options:
+        - Low — nice to know, no immediate need
+        - Medium — helpful for upcoming decisions
+        - High — blocking upcoming work
+        - Critical — urgent decision needed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timeframe
+    attributes:
+      label: ⏱️ Expected timeframe
+      description: How long do you expect this research to take?
+      options:
+        - Quick — a few hours
+        - Short — 1-2 days
+        - Medium — 3-5 days
+        - Long — 1-2 weeks
+        - Extended — multiple weeks
+
+  - type: textarea
+    id: research-scope
+    attributes:
+      label: 🎯 Research scope
+      description: What will be included and excluded from this research?
+      placeholder: |
+        **In scope:**
+        - 
+
+        **Out of scope:**
+        -
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: 🔬 Research methodology
+      description: How will you conduct this research?
+      placeholder: |
+        1. Literature review of...
+        2. Hands-on testing of...
+        3. Performance benchmarking...
+        4. Expert interviews...
+
+  - type: textarea
+    id: resources-needed
+    attributes:
+      label: 🛠️ Resources needed
+      description: What resources, tools, or access do you need for this research?
+      placeholder: |
+        - Access to X system
+        - Y tool/service account
+        - Time with Z expert
+        - Test environment
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: 📦 Expected deliverables
+      description: What outputs will this research produce?
+      placeholder: |
+        - Research report with findings
+        - Comparison matrix
+        - Proof of concept code
+        - Recommendation document
+        - Presentation to stakeholders
+
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: 👥 Stakeholders
+      description: Who should be involved or informed about this research?
+      placeholder: |
+        - Primary: @username
+        - Reviewers: @team
+        - Informed: @stakeholders
+
+  - type: textarea
+    id: risks-assumptions
+    attributes:
+      label: ⚠️ Risks & assumptions
+      description: Any risks or assumptions for this research?
+      placeholder: |
+        **Assumptions:**
+        - 
+
+        **Risks:**
+        -
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional context
+      description: Any other relevant information or constraints.
+      placeholder: Links to related issues, documents, or constraints...

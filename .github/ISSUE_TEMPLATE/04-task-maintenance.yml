@@ -1,0 +1,153 @@
+name: 🔧 Task & maintenance
+description: Internal task, maintenance, or technical debt item
+title: "[TASK] "
+type: Maintenance
+labels: ["refactor", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **👋 Who should use this template:**
+        - Myself for tracking internal improvements and tasks.
+        - Contributors working on technical improvements.
+        - Anyone helping with development or maintenance tasks.
+
+        **👎 This template is not for:**
+        - User-facing bug reports; use the "[🐞 Bug report](https://github.com/whallin/.github/issues/new?template=01-bug-report.yml)" template instead.
+        - Feature requests; use the "[✨ Feature request](https://github.com/whallin/.github/issues/new?template=02-feature-request.yml)" template instead.
+
+        ---
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: 🏷️ Task type
+      description: What type of task is this?
+      options:
+        - Refactoring
+        - Technical debt
+        - Code cleanup
+        - Dependency update
+        - Infrastructure
+        - CI/CD improvement
+        - Testing improvement
+        - Monitoring/Logging
+        - Security update
+        - Maintenance
+        - Research/Investigation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🎯 Priority
+      description: How urgent is this task?
+      options:
+        - Low — can be done when time permits
+        - Medium — should be done in next sprint
+        - High — should be done soon
+        - Critical — needs immediate attention
+    validations:
+      required: true
+
+  - type: textarea
+    id: task-description
+    attributes:
+      label: 📝 Task description
+      description: Describe what needs to be done.
+      placeholder: "We need to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 💡 Motivation
+      description: Why is this task necessary? What problem does it solve?
+      placeholder: "This task is needed because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance criteria
+      description: What defines this task as complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: 🛠️ Implementation notes
+      description: Any technical details or approaches to consider.
+      placeholder: "Consider using X approach because..."
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: ⏱️ Estimated complexity
+      description: How complex is this task?
+      options:
+        - Simple — a few hours
+        - Medium — 1-2 days
+        - Complex — several days
+        - Large — a week or more
+
+  - type: textarea
+    id: affected-areas
+    attributes:
+      label: 🎯 Affected areas
+      description: What parts of the codebase or system will this affect?
+      placeholder: |
+        - Frontend components
+        - Backend API
+        - Database
+        - Infrastructure
+        - Documentation
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 🔗 Dependencies
+      description: Are there any blocking dependencies or prerequisites?
+      placeholder: "This task depends on..."
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: ⚠️ Risks & considerations
+      description: Any risks or important considerations for this task?
+      placeholder: "Be careful of X because..."
+
+  - type: checkboxes
+    id: breaking-changes
+    attributes:
+      label: 💥 Breaking changes
+      description: Will this task introduce any breaking changes?
+      options:
+        - label: This task may introduce breaking changes.
+        - label: This task requires database migrations.
+        - label: This task affects public APIs.
+        - label: This task requires configuration changes.
+
+  - type: textarea
+    id: testing-strategy
+    attributes:
+      label: 🧪 Testing strategy
+      description: How should this task be tested?
+      placeholder: |
+        - Unit tests for...
+        - Integration tests for...
+        - Manual testing of...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional context
+      description: Any other relevant information.
+      placeholder: Links to related issues, documentation, or resources...

@@ -1,0 +1,155 @@
+name: 🚀 Performance issue
+description: Report performance problems or optimization opportunities
+title: "[PERF] "
+type: Performance
+labels: ["performance", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **📋 When to use this template:**
+        - The application is running slower than expected.
+        - You're experiencing high memory or CPU usage.
+        - UI is lagging, freezing, or unresponsive.
+        - Database queries or API calls are slow.
+        - Bundle sizes are too large or requests are inefficient.
+
+        **🤔 What makes a good performance report:**
+        - **Quantified**: Include specific numbers (response times, memory usage, etc.)
+        - **Reproducible**: Clear steps to reproduce the performance issue.
+        - **Measured**: Before/after comparisons or benchmarks.
+        - **Contextual**: Environment details and usage patterns.
+
+        **🧭 Performance vs. bug:**
+        - **Performance issue**: Feature works, but is slower than expected.
+        - **Bug**: Feature doesn't work correctly or produces errors.
+
+        ---
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Pre-flight checklist
+      description: By submitting this issue, you agree to follow our guidelines.
+      options:
+        - label: I've searched existing issues to ensure this performance issue hasn't been reported before.
+          required: true
+        - label: I've verified this is a performance issue and not a bug.
+          required: true
+        - label: I've tested this with the latest version.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 🏷️ Version
+      description: What version are you running?
+      placeholder: "v1.2.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: performance-type
+    attributes:
+      label: 🏷️ Performance issue type
+      description: What type of performance issue are you experiencing?
+      options:
+        - Slow response times
+        - High memory usage
+        - High CPU usage
+        - Slow startup/initialization
+        - Slow data loading
+        - UI lag/freezing
+        - Network performance
+        - Database performance
+        - Bundle size/Load times
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: performance-description
+    attributes:
+      label: 🐌 Performance issue description
+      description: Describe the performance problem in detail.
+      placeholder: "The application takes X seconds to do Y, which feels slow because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to reproduce
+      description: Steps to reproduce the performance issue.
+      placeholder: |
+        1. Open the application
+        2. Navigate to '...'
+        3. Perform action '...'
+        4. Observe slow performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: performance-metrics
+    attributes:
+      label: 📊 Performance metrics
+      description: If available, provide specific metrics (response times, memory usage, etc.)
+      placeholder: |
+        - Current performance: X seconds/MB/CPU%
+        - Expected performance: Y seconds/MB/CPU%
+        - Measurement method: Browser DevTools, profiler, etc.
+
+  - type: textarea
+    id: environment-details
+    attributes:
+      label: 💻 Environment details
+      description: Provide detailed environment information.
+      placeholder: |
+        - OS: [e.g., Windows 11, macOS 15.0, Ubuntu 24.04]
+        - Browser: [e.g., Chrome 137, Firefox 139, Safari 18] (if applicable)
+        - Device: [e.g., Desktop, Mobile, specifications]
+        - Network: [e.g., Wifi, 4G, connection speed]
+        - Hardware: [e.g., RAM, CPU, storage type]
+    validations:
+      required: true
+
+  - type: textarea
+    id: profiling-data
+    attributes:
+      label: 📈 Profiling data
+      description: If you have profiling data, flame graphs, or performance traces, please share them.
+      placeholder: Drag and drop profiling files OR screenshots here
+
+  - type: textarea
+    id: expected-performance
+    attributes:
+      label: ✅ Expected performance
+      description: What performance do you expect? Any benchmarks or comparisons?
+      placeholder: "I expect this operation to complete in under X seconds because..."
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🎯 Performance impact
+      description: How severely does this performance issue affect usage?
+      options:
+        - Low — noticeable but not blocking
+        - Medium — affects user experience
+        - High — significantly impacts workflow
+        - Critical — makes the application unusable
+    validations:
+      required: true
+
+  - type: textarea
+    id: workarounds
+    attributes:
+      label: 🔄 Workarounds
+      description: Have you found any workarounds for this performance issue?
+      placeholder: "I found that doing X instead of Y improves performance..."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional context
+      description: Add any other context about the performance issue.
+      placeholder: Any additional information that might be helpful...

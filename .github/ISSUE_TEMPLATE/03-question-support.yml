@@ -1,0 +1,141 @@
+name: ❓ Question & support
+description: Ask a question or get help with usage
+title: "[SUPPORT] "
+type: Support
+labels: ["question", "needs review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **📋 When to use this template:**
+        - You need help understanding how to use a feature.
+        - You want guidance on best practices or implementation approaches.
+        - You have configuration or setup questions.
+        - You need troubleshooting help, but it's not a clear bug.
+        - You want architectural or design advice.
+
+        **🤔 Consider using [GitHub Discussions](https://github.com/whallin/.githuub/discussions) instead if:**
+        - Your question is more conversational or open-ended.
+        - You want to discuss ideas or get feedback from me.
+        - You're looking for general advice rather than specific help.
+
+        **Found a bug?** Use the "[🐞 Bug report](https://github.com/whallin/.github/issues/new?template=01-bug-report.yml)" template.
+        **Want a new feature?** Use the "[✨ Feature request](https://github.com/whallin/.github/issues/new?template=02-feature-request.yml)" template.
+
+        ---
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Pre-flight checklist
+      description: By submitting this issue, you agree to follow our guidelines.
+      options:
+        - label: I've searched existing issues and discussions for similar questions.
+          required: true
+        - label: I've read the documentation and FAQ.
+          required: true
+        - label: This is a specific question and not a bug report or feature request.
+          required: true
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: 🏷️ Question type
+      description: What type of question is this?
+      options:
+        - How to use a feature
+        - Configuration help
+        - Integration guidance
+        - Best practices
+        - Troubleshooting
+        - Architecture/Design
+        - API usage
+        - Deployment/Setup
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: ❓ Question
+      description: What would you like to know?
+      placeholder: "I'm trying to understand how to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📝 Context
+      description: Provide context about what you're trying to achieve.
+      placeholder: "I'm working on a project where I need to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: 🔄 What have you tried?
+      description: Describe what you've already attempted.
+      placeholder: |
+        1. I tried...
+        2. I also attempted...
+        3. I looked at...
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: ✅ Expected outcome
+      description: What outcome are you hoping to achieve?
+      placeholder: "I expect to be able to..."
+
+  - type: textarea
+    id: current-setup
+    attributes:
+      label: ⚙️ Current setup
+      description: If relevant, describe your current configuration or setup.
+      placeholder: |
+        - Version: 
+        - Configuration: 
+        - Environment: 
+        - Dependencies:
+
+  - type: textarea
+    id: code-examples
+    attributes:
+      label: 💻 Code examples
+      description: If applicable, provide code examples or configuration files.
+      render: javascript
+      placeholder: |
+        // Your current code or configuration
+        const example = "your code here";
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 🎯 Urgency
+      description: How urgent is this question for your work?
+      options:
+        - Low — just curious
+        - Medium — would help improve workflow
+        - High — blocking current task
+        - Critical — urgent project deadline
+
+  - type: checkboxes
+    id: help-improve
+    attributes:
+      label: 📚 Documentation improvement
+      description: Would better documentation have helped answer this question?
+      options:
+        - label: Yes, this should be covered in the documentation.
+        - label: The documentation exists, but was hard to find.
+        - label: The documentation exists, but was unclear.
+        - label: This is an edge case not worth documenting.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional context
+      description: Add any other context about your question.
+      placeholder: Any additional information that might be helpful...
