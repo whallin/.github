@@ -1,4 +1,4 @@
-![Profile banner for @whallin](banner.png)
+![Profile banner for @whallin](/profile/banner.png)
 
 ### Hallå där! 👋
 
