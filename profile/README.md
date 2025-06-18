@@ -9,11 +9,3 @@ Creative fanatic at [HallinMedia](https://hallin.media?ref=gh-whallin) by day �
 🌍 Find me elsewhere @ [hallin.media/contact](https://hallin.media/contact/)
 <br>
 📜 Read my blog @ [hallin.media/blog](https://hallin.media/blog/)
-
----
-
-<div align="center">
-    <sub>
-        Crafting cool things in Sweden.
-    </sub>
-</div>
