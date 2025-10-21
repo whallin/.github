@@ -2,7 +2,7 @@
 
 ### Hallå där! 👋
 
-Creative fanatic at [HallinMedia](https://hallin.media?ref=gh-whallin) by day ☀️
+Creative fanatic at [@newgentdigital](https://github.com/newgentdigital) by day ☀️
 <br>
 & wanna-be developer at [@ecleangg](https://github.com/ecleangg) by night 🌙
 
